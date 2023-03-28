@@ -1,9 +1,9 @@
 import React from 'react';
 import { BsTrash3 } from 'react-icons/bs';
-import styles from './TodoItem.module.css';
+import styles from './Todo.module.css';
 
-export default function TodoItem({ todo, onUpdate, onDelete }) {
-  const { item, status } = todo;
+export default function Item({ todo, onUpdate, onDelete }) {
+  const { id, item, status } = todo;
   const handleChange = (e) => {
     const status = e.target.checked ? 'completed' : 'active';
     onUpdate({ ...todo, status: status });
@@ -15,11 +15,11 @@ export default function TodoItem({ todo, onUpdate, onDelete }) {
       <input
         className={styles.list__checkbox}
         type='checkbox'
-        id='checkbox'
+        id={id}
         checked={status === 'completed'}
         onChange={handleChange}
       />
-      <label htmlFor='checkbox' className={styles.list__label}>
+      <label htmlFor={id} className={styles.list__label}>
         {item}
       </label>
       <span className={styles.list__icon}>

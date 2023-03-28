@@ -1,0 +1,131 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-flex-group: var(--color-bg-dark);
+    border-bottom: 1px solid var(--color-grey);
+    padding: 0 0.5rem;
+}
+
+.toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-text);
+    transition: all 150ms ease-out;
+}
+
+.toggle:hover {
+    transform: scale(1.1);
+    color: var(--color-accect);
+}
+
+.header__ul {
+    display: flex;
+
+}
+
+.header__btn {
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: var(--color-accect);
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+.header__btn:hover,
+.header__btn.selected {
+    opacity: 1;
+}
+
+.header__btn.selected::after {
+    content: '';
+    display: block;
+    margin-top: 0.2rem;
+    border: 1px solid var(--color-text);
+}
+
+.container {
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-light);
+}
+
+.container__ul {
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 0.1rem 0;
+    color: var(--color-text);
+}
+
+.list__checkbox {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.list__label {
+    flex: 1 1 0%;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.list__icon {
+    width: 26px;
+    height: 26px;
+    background-color: var(--color-grey);
+    border-radius: 100%;
+    transition: all 150ms ease-out;
+}
+
+.list__icon:hover {
+    background-color: var(--color-accect);
+    transform: rotate(15deg) scale(1.2);
+}
+
+.list__btn {
+    color: var(--color-text);
+    background-color: transparent;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    padding: 1.3rem 1rem;
+    background-color: var(--color-bg-dark);
+}
+
+.form__input {
+    flex: 1 0 auto;
+    font-size: 1.3rem;
+    padding: 0.7rem 1rem;
+    border: none;
+    outline: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.form__btn {
+    background-color: var(--color-accect);
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 0 2rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+
+.form__btn:hover {
+    filter: brightness(125%);
+}

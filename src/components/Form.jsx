@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import styles from './TodoForm.module.css';
+import styles from './Todo.module.css';
 
 export default function TodoForm({ onAdd }) {
   const [item, setItem] = useState('');

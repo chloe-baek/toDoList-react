@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import TodoList from './components/TodoList';
-import TodoHeader from './components/TodoHeader';
+import List from './components/List';
+import Header from './components/Header';
 import './App.css';
 import { DarkModeProvider } from './context/DarkModeContext';
 
@@ -9,12 +9,12 @@ function App() {
   const [filter, setFilter] = useState(filters[0]);
   return (
     <DarkModeProvider>
-      <TodoHeader
+      <Header
         filters={filters}
         filter={filter}
         onChange={(filter) => setFilter(filter)}
       />
-      <TodoList filter={filter} />
+      <List filter={filter} />
     </DarkModeProvider>
   );
 }
