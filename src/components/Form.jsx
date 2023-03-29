@@ -10,7 +10,7 @@ export default function TodoForm({ onAdd }) {
     if (item.trim().length === 0) {
       return;
     }
-    onAdd({ id: uuidv4(), item, status: 'active' });
+    onAdd({ id: uuidv4(), item, status: 'incomplete' });
     setItem('');
   };
   return (
@@ -18,7 +18,7 @@ export default function TodoForm({ onAdd }) {
       <input
         className={styles.form__input}
         type='text'
-        placeholder='Add Todo'
+        placeholder='Add a new task'
         value={item}
         onChange={handleChange}
       />

@@ -33,7 +33,7 @@ export default function List({ filter }) {
 }
 
 function getFilteredItems(lists, filter) {
-  if (filter === 'all') {
+  if (filter === 'tasks') {
     return lists;
   }
   return lists.filter((list) => list.status === filter);
